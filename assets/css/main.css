@@ -411,9 +411,6 @@ body {
   border: 1px solid var(--text-white);
   border-radius: var(--border-radius);
   padding: 0 2rem;
-  justify-content: center;
-  justify-self: center;
-  align-self: center;
   cursor: pointer;
 }
 
@@ -522,6 +519,9 @@ body {
   background: var(--bg-secondary);
   color: var(--text-white);
   border-radius: var(--border-radius);
+  justify-self: center;
+  justify-content: center;
+  align-self: center;
   justify-self: center;
   align-self: center;
   margin-top: 2rem;
