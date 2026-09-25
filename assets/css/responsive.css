@@ -64,7 +64,7 @@ img  { max-width: 100%; height: auto; }
   .hero-accent { margin-top: 2rem; }
 
   /* Subscribe */
-  .subscribe .container { height: auto; padding: 3rem 1.5rem; overflow: hidden; }
+  .subscribe .container { height: auto; padding: 3rem 1.5rem; overflow: hidden; justify-content: center; align-items: center;}
   .subscribe-main { max-width: 70%; }
   .subscribe-image { width: 20%; }
 
@@ -98,6 +98,8 @@ img  { max-width: 100%; height: auto; }
   .form-field { flex-direction: column; align-items: center;}
   .form-input .email { width: 100%; font-size: 1rem; }
   .form-field .submit { padding: 0.9rem 2rem; font-size: 1rem; }
+  .footer-form .submit { padding: 0.9rem 2rem; font-size: 1rem; }
+
 
   /* Team: cards stay a row (image left, text right); the cards themselves stack */
   .profiles { flex-direction: column; align-items: stretch; padding-top: 2rem; }
@@ -112,6 +114,9 @@ img  { max-width: 100%; height: auto; }
   .watch-time h3, .followers h3 { font-size: 1.15rem; }
   .watch-time p, .followers p { font-size: 0.8rem; gap: 0.25rem; }
   .team-info { font-size: 1rem; }
+
+  /* Profiles */
+  .view-profiles { justify-self: center; align-self: center; }
 
   /* Footer */
   .footer-form .submit { justify-self: center;}
