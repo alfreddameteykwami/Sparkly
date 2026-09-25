@@ -400,7 +400,7 @@ body {
   outline: none;
   transition: border-color 0.15s, background-color 0.25s;
 }
-.form-input .email::placeholder { color: var(--accent); }
+.form-input .email::placeholder { color: var(--text-white); }
 .form-input .email:focus { border-color: var(--text-white); }
 
 .form-field .submit {
@@ -420,6 +420,9 @@ body {
 .team {
   padding-top: calc(var(--nav-h));
   padding-bottom: 2rem;
+}
+.team .container {
+  justify-content: center;
 }
 .team-header {
   text-align: center;
@@ -508,6 +511,7 @@ body {
 }
 .view-profiles {
   display: flex;
+  width: fit-content;
   font-family: var(--font-sans);
   font-size: 18px;
   font-weight: 500;
@@ -515,8 +519,8 @@ body {
   background: var(--bg-secondary);
   color: var(--text-white);
   border-radius: var(--border-radius);
-  width: fit-content;
   justify-self: center;
+  align-self: center;
   margin-top: 2rem;
 }
 
@@ -534,6 +538,7 @@ body {
 .register-description {
   padding-top: 2.875rem;
   max-width: 32rem;
+  font-weight: 100;
 }
 .register-accent {
   padding: 0.5rem 1rem;
@@ -618,7 +623,7 @@ body {
   outline: none;
   transition: border-color 0.15s, background-color 0.25s;
 }
-.footer-form .footer-email::placeholder { color: var(--accent); }
+.footer-form .footer-email::placeholder { color: var(--text-white); }
 .footer-form .footer-email:focus { border-color: var(--border); }
 
 .footer-form .submit {
