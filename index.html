@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Project</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  </head>
+  <body>
+
+    <!-- Sidebar overlay -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Mobile sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+          <span class="sidebar-label">menu</span>
+          <button class="sidebar-close" id="sidebar-close" aria-label="Close menu">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="#hero"     class="sidebar-link active" data-close><span>Home</span>     <span class="sidebar-num">01</span></a>
+          <a href="#about"    class="sidebar-link" data-close><span>About us</span>    <span class="sidebar-num">02</span></a>
+          <a href="#courses"     class="sidebar-link" data-close><span>Courses</span>     <span class="sidebar-num">03</span></a>
+          <a href="#mentors"  class="sidebar-link" data-close><span>Mentors</span>  <span class="sidebar-num">04</span></a>
+          <a href="#blogs"  class="sidebar-link" data-close><span>Blogs</span>  <span class="sidebar-num">05</span></a>
+          <a href="#contact"  class="sidebar-link" data-close><span>Contact us</span>  <span class="sidebar-num">06</span></a>
+        </nav>
+        <div class="sidebar-footer">&copy; 2026 The Golden Fork Resturant | All rights reserved.</div>
+    </aside>
+    
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <div class="navbar-logo">
+          <span><img src="assets/images/nav-logo.png" alt="Logo" class="nav-logo"></span>
+          <span><h1>Sparkly</h1></span>
+        </div>
+
+        <div class="nav-desktop">
+          <a href="#hero"     class="nav-link">Home</a>
+          <a href="#about"    class="nav-link">About us</a>
+          <a href="#courses"  class="nav-link">Courses</a>
+          <a href="#mentors"  class="nav-link active">Mentors</a>
+          <a href="#blogs"    class="nav-link">Blogs</a>
+          <a href="#contact"  class="nav-link">Contact us</a>
+          <a href="#" class="register-btn">Register now</a>
+        </div>
+
+        <div class="nav-mobile">
+          <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+            <span class="ham-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-description">
+          <div>
+            <p class="hero-accent">Our Mentors</p>
+          </div>
+          <div class="hero-heading">
+            <h1>Elevate your Skills with our <span class="hero-heading-accent">Experts</span></h1>
+          </div>
+          <div class="hero-reviews">
+            <span>
+              <img src="assets/images/reviews.png" alt="Reviews"
+              class="review-img">
+            </span>
+            <span>
+              <img src="assets/images/ratings.png" alt="Ratings">
+              <p class="review-txt">2.5K Reviews</p>
+            </span>
+          </div>
+          <div class="hero-btns reveal">
+            <span>
+              <a href="#" class="explore-courses">Explore courses</a>
+            </span>
+            <span>
+              <div class="video-links">
+                <img src="assets/images/play-video.png" alt="Video link">
+                <a href="#" class="video-link">How it works</a>
+              </div>
+            </span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-main" src="assets/images/bg-image1.png" alt="Background">
+          
+          <img class="deco sun"   src="assets/images/sun.png"   alt="" />
+          <img class="deco book"  src="assets/images/book.png"  alt="" />
+          <img class="deco chart" src="assets/images/chart.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Subscribe -->
+    <section class="subscribe" id="subscribe">
+      <div class="container reveal">
+        <div>
+          <img class="subscribe-image left" src="assets/images/image 48.png" alt="Background image">
+        </div>
+
+        <div class="subscribe-main">
+          <h1 class="subscribe-heading">
+            Subscribe to our newsletter for updates
+          </h1>
+          <p class="subscribe-description">
+            Stay informed with the latest news, insights, and updates delivered straight to your inbox
+          </p>
+          <div class="email-form">
+            <form class="form-field">
+              <div class="form-input">
+                <i class="bx bx-envelope" aria-hidden="false"></i>
+                <input type="email" class="email" name="email" id="email" placeholder="Email address">
+              </div>
+              <button type="submit" class="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <div>
+          <img class="subscribe-image right" src="assets/images/image 46.png" alt="Background image">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Team -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="team-header reveal">
+          <div class="team-accent">
+            <p>Our Team</p>
+          </div>
+          <h1 class="team-heading">Learn from Industry Experts</h1>
+          <p class="team-info">Gain insights from industry experts and master real world skills for career growth and professional development</p>
+        </div>
+        <div class="profiles reveal">
+          <div class="profile-card">
+            <span class="profile-image">
+              <img src="assets/images/sophie.png" alt="Sophie">
+            </span>
+            <span>
+              <h2 class="profile-name">Sophie Johnson</h2>
+              <p class="profile-field">Data Analyst Mentor</p>
+              <div class="profile-info">
+                <span class="watch-time">
+                  <h3>20M+</h3>
+                   <p><img src="assets/icons/time circle.svg">Watch time</p>
+                </span>
+                <span class="followers">
+                  <h3>10K+</h3>
+                  <p><img src="assets/icons/profile-2user.svg">Followers</p>
+                </span>
+              </div>
+              <a href="#" class="profile-link">View profile &RightArrow;</a>
+            </span>
+          </div>
+
+          <div class="profile-card">
+            <span class="profile-image">
+              <img src="assets/images/colin.png" alt="Colin">
+            </span>
+            <span>
+              <h2 class="profile-name">Colin Munro</h2>
+              <p class="profile-field">AI/ML Expert Mentor</p>
+              <div class="profile-info">
+                <span class="watch-time">
+                  <h3>35M+</h3>
+                   <p><img src="assets/icons/time circle.svg">Watch time</p>
+                </span>
+                <span class="followers">
+                  <h3>12K+</h3>
+                  <p><img src="assets/icons/profile-2user.svg">Followers</p>
+                </span>
+              </div>
+              <a href="#" class="profile-link">View profile &RightArrow;</a>
+            </span>
+          </div>
+        </div>
+        
+        <a href="#" class="view-profiles reveal">See all</a>
+
+      </div>
+    </section>
+
+
+    <!-- Register Section -->
+    <section class="register" id="register">
+      <div class="container">
+        <div class="register-grid reveal">
+          <div class="register-description">
+            <div class="register-accent">
+              <p>Become a Mentor</p>
+            </div>
+            <h1 class="register-heading">Join Our Team -<br> Inspire Learners Today!</h1>
+            <p class="register-info">Become a part of our passionate educator community and share your expertise with learners worldwide. As an instructor, you'll create engaging course, guide students, and help shape their personal and professional success</p>
+            <a href="#" class="join-btn">Join our team</a>
+          </div>
+          <div class="register-background">
+            <img src="assets/images/register-background.png" alt="Background image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-main">
+            <div class="footer-logo">
+              <img src="assets/images/footer-logo.png" alt="Logo">
+              <h1>Sparkly</h1>
+            </div>
+            <form class="footer-form">
+              <div class="footer-input">
+                <i class="bx bx-envelope" aria-hidden="true"></i>
+                <input type="email" class="footer-email" name="footer-email" id="footerEmail" placeholder="Email address">
+              </div>
+              <button type="submit" class="submit">Submit</button>
+            </form>
+          </div>
+          <div class="company">
+            <h1>Company</h1>
+            <a href="#" class="company-link">Home</a>
+            <a href="#" class="company-link">Mentors</a>
+            <a href="#" class="company-link">About us</a>
+            <a href="#" class="company-link">Contact us</a>
+          </div>
+          <div class="courses">
+            <h1>Courses</h1>
+            <a href="#" class="course-link">UI/UX Designing</a>
+            <a href="#" class="course-link">Web Development</a>
+            <a href="#" class="course-link">Data Visualization</a>
+            <a href="#" class="course-link">Digital Marketing</a>
+            <a href="#" class="course-link">AI/ML</a>
+          </div>
+          <div class="downloads">
+            <div href="#" class="download-link appstore">
+              <img src="assets/images/apple.png" alt="App store">
+              <p>App store <span>&RightArrow;</span></p>
+            </div>
+            <div href="#" class="download-link playstore">
+              <img src="assets/images/play-store.png" alt="Play store">
+              <p>Play store <span>&RightArrow;</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-note">
+            <p>&copy; Sparkly Inc. All Rights Reserved.</p>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="X"><img src="assets/icons/twitter.svg" alt=""></a>
+            <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt=""></i></a>
+            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+            <a href="#" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt=""></a>   
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,138 @@
+/* responsive.css — load AFTER main.css
+   Breakpoints: 1120 (small laptop) · 991 (tablet) · 767 (large phone) · 480 (small phone) */
+
+/* ── Base fixes (all sizes) ── */
+html { scroll-padding-top: var(--nav-h); }      /* anchor jumps don't hide under the fixed navbar */
+body { overflow-x: clip; }                      /* safety net against sideways scroll */
+img  { max-width: 100%; height: auto; }
+
+.container { width: calc(100% - 2.5rem); }      /* side gutters; max-width 1120px still caps it on desktop */
+
+/* Fluid headings replace fixed sizes */
+.hero-heading h1 { font-size: clamp(2rem, 5.5vw, 4rem); }
+.subscribe-heading,
+.team-heading,
+.register-heading { font-size: clamp(1.75rem, 4.5vw, 2.985rem); }
+
+/* Decorations must sit below the sidebar (was z-index 202, above the sidebar) */
+.deco { z-index: 2; }
+
+/* Email icon: position it inside the input so the input can go full width */
+.form-input { position: relative; flex: 1; }
+.form-input i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  pointer-events: none;
+}
+
+/* Footer email icon (wrapper div needs class="footer-input") */
+.footer-input { position: relative; }
+.footer-input i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: var(--text-white);
+  pointer-events: none;
+}
+
+/* ── ≤1120px: small laptops ── */
+@media (max-width: 1120px) {
+  .navbar-inner { gap: 2rem; padding: 0 1.25rem; justify-content: space-between; }
+  .nav-desktop  { gap: 1.25rem; }
+  .nav-link, .register-btn { font-size: 16px; }
+  .register-btn { margin-left: 0; padding: 0.7rem 1.25rem; }
+}
+
+/* ── ≤991px: tablets — hamburger menu, single-column sections ── */
+@media (max-width: 991px) {
+  /* Nav */
+  .nav-desktop { display: none; }
+  .nav-mobile  { display: flex; }
+  .hamburger   { margin-left: 0; }
+  .navbar-logo h1 { font-size: 24px; }
+  .sidebar { width: min(280px, 85vw); }
+  .sidebar-link { font-size: 0.8rem; padding: 14px 0; }
+
+  /* Hero */
+  .hero .container { flex-direction: column-reverse; }
+  .hero-visual { align-self: center; max-width: 560px; }
+  .hero-accent { margin-top: 2rem; }
+
+  /* Subscribe */
+  .subscribe .container { height: auto; padding: 3rem 1.5rem; overflow: hidden; }
+  .subscribe-main { max-width: 70%; }
+  .subscribe-image { width: 20%; }
+
+  /* Team */
+  .profiles { flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
+
+  /* Register */
+  .register-grid { flex-direction: column; gap: 2rem; }
+  .register-description { max-width: none; padding-top: 0; }
+
+  /* Footer */
+  .footer { padding: 4rem 0; }
+  .footer-top { flex-wrap: wrap; gap: 2.5rem 2rem; }
+  .footer-main { flex: 1 1 100%; }
+  .company, .courses { flex: 1 1 40%; }
+  .downloads { flex: 1 1 100%; flex-direction: row; flex-wrap: wrap; gap: 1rem; }
+  .download-link { margin-bottom: 0; }
+  .footer-form .footer-email { width: 100%; max-width: 24rem; }
+}
+
+/* ── ≤767px: phones ── */
+@media (max-width: 767px) {
+  .hero { padding-top: calc(var(--nav-h) + 20px); }
+  .hero-btns { flex-wrap: wrap; gap: 1rem 2rem; }
+  .chart { left: 0; }                            /* was -12%, caused horizontal overflow */
+
+  /* Subscribe: drop the side illustrations, stack the form */
+  .subscribe-image { display: none; }
+  .subscribe-main { max-width: 100%; }
+  .subscribe-description { padding: 0; font-size: 1rem; }
+  .form-field { flex-direction: column; align-items: center;}
+  .form-input .email { width: 100%; font-size: 1rem; }
+  .form-field .submit { padding: 0.9rem 2rem; font-size: 1rem; }
+
+  /* Team: cards stay a row (image left, text right); the cards themselves stack */
+  .profiles { flex-direction: column; align-items: stretch; padding-top: 2rem; }
+  .profile-card { gap: 1rem; padding: 1rem; }
+  .profile-image { flex: 0 0 38%; }
+  .profile-image img { width: 100%; }
+  .profile-card > span:last-child { min-width: 0; }
+  .profile-name { font-size: 1.25rem; }
+  .profile-field { font-size: 1rem; }
+  .watch-time { padding-right: 0.75rem; }
+  .followers { padding-left: 0.75rem; }
+  .watch-time h3, .followers h3 { font-size: 1.15rem; }
+  .watch-time p, .followers p { font-size: 0.8rem; gap: 0.25rem; }
+  .team-info { font-size: 1rem; }
+
+  /* Footer */
+  .footer-form .submit { justify-self: center;}
+  .footer-bottom { flex-direction: column-reverse; gap: 1.5rem; text-align: center; font-size: 1rem; }
+  .social-links { gap: 1rem; }
+  .social-links a { padding: 0.75rem; }
+  .company h1, .courses h1 { font-size: 22px; margin-bottom: 1.25rem; }
+  .company-link, .course-link { font-size: 1.05rem; margin-bottom: 1rem; }
+}
+
+/* ── ≤480px: small phones ── */
+@media (max-width: 480px) {
+  .navbar-inner { padding: 0 1rem; }
+  .hero-accent, .team-header .team-accent, .register-accent,
+  .nav-link, .register-btn, .explore-courses, .join-btn, .video-links a { font-size: 16px; }
+  .subscribe .container { padding: 2.5rem 1rem; }
+  .company, .courses { flex-basis: 100%; }
+  /* .download-link { width: 100%; } */
+
+  /* Profile stats stack so they fit beside the photo */
+  .profile-info { flex-direction: row; gap: 0.5rem; }
+  .watch-time { border-right: 0; padding-right: 0; }
+  .followers { padding-left: 0; }
+}

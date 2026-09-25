@@ -1,0 +1,23 @@
+:root {
+  --bg-primary: #fafafa;
+  --bg-secondary: #5d38de;
+  --bg-accent: #afa3ff;
+  --bg-link: #6843eb;
+  --bg-accent: #f5f2ff;
+  --accent:      #0284c7;
+  --surface:     #ffffff;
+  --muted:       #9090b0;
+  --fg-dim:      #52527a;
+  --text-primary: #141219;
+  --text-accent: #5d38de;
+  --text-white: #ffffff;
+  --text-yellow: #ffd700;
+
+  --border: #e6e6e6;
+  --border-radius: 80px;
+  --border-radius2: 24px;
+
+  --nav-h: 80px;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
