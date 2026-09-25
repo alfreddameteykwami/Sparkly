@@ -423,6 +423,7 @@ body {
 }
 .team .container {
   justify-content: center;
+  align-items: center;
 }
 .team-header {
   text-align: center;
