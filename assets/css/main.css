@@ -411,6 +411,9 @@ body {
   border: 1px solid var(--text-white);
   border-radius: var(--border-radius);
   padding: 0 2rem;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
   cursor: pointer;
 }
 
